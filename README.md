@@ -2,7 +2,7 @@
 
 ## core Java
 
-### * jdk - jdk 1.8 window 64 bit
+* ### jdk - jdk 1.8 window 64 bit
 	+ jdk => jdk(compiler) + jre(executor)   
 			└ 코드가 자바규칙을 잘 지켜서 작성되었는지 확인하고 byte code로 변환.
 	+ jre => jre(executor)
