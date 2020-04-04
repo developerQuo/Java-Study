@@ -12,7 +12,7 @@
 * ### java.lang 패키지
 >	자바의 가장 기초적인 클래스들이 모여있는 곳. 
 >	기초자료형의 wrapper 클래스가 존재.
->	클래스의 method를 이용하여 문자와 숫자간 형변환이 가능.
+>	클래스의 method를 이용하여 문자와 숫자간 형변환이 가능.   
 	+ #### 문자   
 		+ 문자열 - String: immutable character strings (default value: null)
 		+ 문자 - char: ASCII code로 작성된 2byte(0을 포함한 정수) 문자 데이터.   
