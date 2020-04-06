@@ -58,8 +58,7 @@
 			결과값 반환은 Connection이 유지된 상태에서 가능.
 	+ Statement: 쿼리를 실행할 때마다 컴파일해서 사용.
 	+ PreparedStatement: 쿼리문을 precompiled해서 사용.   
-	Statement <-> PreparedStatement: 적은 양의 쿼리를 처리할 때는 Statement가 더 빠르지만   
-					대량의 쿼리를 처리할 때는 PreparedStatement가 빠름.
+	Statement <-> PreparedStatement: 적은 양의 쿼리를 처리할 때는 Statement가 더 빠르지만 대량의 쿼리를 처리할 때는 PreparedStatement가 빠름.
 	+ ResultSet: a DB result set. cursor 속성이 있어, Iterable.
 * ### java.io 패키지
 	<pre>
@@ -72,9 +71,7 @@
 	+ FileWriter: 2 byte 단위로 파일을 writing.
 	+ Buffered ~: 하나씩이 아닌 한덩어리씩 데이터를 주거나 받음.   
 			하나의 덩어리가 완전히 채워지면 차례차례 전송. 전송 단위가 더 큼.
-	+ BufferedOutputStream, BufferedWriter, FileOutputStream, FileWriter와 같이 파일을   
-		작성하는 클래스는 아직 채워지지않은 마지막 덩어리(buffer)를 처리하기 위해   
-		__반드시 flush()함수를 사용__.
+	+ BufferedOutputStream, BufferedWriter, FileOutputStream, FileWriter와 같이 파일을 작성하는 클래스는 아직 채워지지않은 마지막 덩어리(buffer)를 처리하기 위해 __반드시 flush()함수를 사용__.
 * ### java.Net 패키지: networking 구현 관련 자원을 가짐.
 	+ Inet4Address : IPv4 (networking protocol. 32-bit address space : 2³²)
 	+ Inet6Address : IPv6 (networking protocol. 128-bit address space : 2¹²⁸)   
@@ -112,8 +109,7 @@
 		+ short-circuit evaluation: 논리연산에서 첫 번째 조건이 부합하지 않으면 두번째 조건은 평가되지 않는다.
 			- AND연산자일 경우: 첫 번째 조건이 false => false
 			- OR연산자일 경우: 첫 번째 조건이 true => true
-		+ 데이터 유효성 검증: 데이터를 처리하는 로직에 데이터가 들어오지 않았다면   
-					로직을 실행하지 않도록 데이터 유효성 검증에 조건식을 사용할 수 있다.
+		+ 데이터 유효성 검증: 데이터를 처리하는 로직에 데이터가 들어오지 않았다면 로직을 실행하지 않도록 데이터 유효성 검증에 조건식을 사용할 수 있다.
 	+ for: 조건식 결과(parameter)가 true이면 true가 아닐 때까지 for문 블럭(scope)을 반복 시행.   
 		__삼중 이상의 for문 작성은 지양.__
 		+ 실행순서: 패턴을 따라 순차적으로 데이터를 처리한다.
@@ -121,15 +117,14 @@
 			2. 조건문 확인		ex) i <= 10;
 			3. scope 내용 실행		ex) {System.out.println("i >>> " + i);}
 			4. 증감연산자 실행		ex) i++   
-			2 ~ 4 반복. 조건이 false가 되면 scope를 더 이상 실행하지 않는다.
+			b ~ d 반복. 조건이 false가 되면 scope를 더 이상 실행하지 않는다.
 		+ Iterator 함수, while 문, 재귀함수 등이 유사한 기능을 수행.
 	+ while: 조건식 결과(parameter)가 조건에 부합하면, 조건이 false가 될 때까지 scope를 반복. 무한루프를 사용할 때 유용.
 		+ break: 강제로 반복문(for문, while문)을 빠져나가는 키워드.   
 			if문과 함께 사용해서 어떤 조건이 되면 강제로 빠져나갈 수 있다.
 		+ continue: continue 다음 라인을 모두 건너뛰고, scope의 마지막으로 이동.   
 				자바에서는 가능한 사용을 지양한다.
-		+ do-while: 조건을 확인하고 scope의 코드를 시행하는 것이 아니라,   
-				반대로 scope의 코드를 시행하고 난 뒤 조건을 확인.
+		+ do-while: 조건을 확인하고 scope의 코드를 시행하는 것이 아니라, 반대로 scope의 코드를 시행하고 난 뒤 조건을 확인.
 	+ switch: 조건문.
 		+ case: switch문의 매개변수가 조건에 해당하는 경우, 해당 case문의 scope를 시행.   
 			단, break문을 scope 마지막에 사용하지 않으면 멈추지 않고 코드를 계속 읽어 내려간다.
