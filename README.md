@@ -5,22 +5,24 @@
 ## 목차   
 1. [jdk](#jdk)
 2. [API, 편집기](#api)
-3. [java.lang 패키지](#java.lang-패키지)
-4. [java.util 패키지](#java.util-패키지)
-5. [java.sql 패키지](#java.sql-패키지)
-6. [java.io 패키지](#java.io-패키지)
-7. [java.Net 패키지](#java.Net-패키지)
-8. [생성자](#생성자)
+3. [java.lang 패키지](#java.lang-package)
+4. [java.util 패키지](#java.util-package)
+5. [java.sql 패키지](#java.sql-package)
+6. [java.io 패키지](#java.io-package)
+7. [java.Net 패키지](#java.Net-package)
+8. [생성자](#constructor)
 9. [flow control](#flow-control)
 
-* ### #jdk - jdk 1.8 window 64 bit
+* ### jdk
+	+ jdk 1.8 window 64 bit 사용.
 	+ jdk => jdk(compiler) + jre(executor)   
 		* compiler: 코드가 자바규칙을 잘 지켜서 작성되었는지 확인하고 byte code로 변환.
 	+ jre => jre(executor)
 
-* ### #API (Oracle.com SE8 API), 편집기 (eclipse neon3)
+* ### API
+	+ (Oracle.com SE8 API), 편집기 (eclipse neon3) 사용.
 
-* ### #java.lang 패키지
+* ### java.lang package
 	<pre>
 	자바의 가장 기초적인 클래스들이 모여있는 곳. 
 	기초자료형의 wrapper 클래스가 존재.
@@ -51,7 +53,7 @@
 		+ start(): thread를 생성하고 run()을 실행.
 		+ run(): thread의 작업을 정의. 종료되면 thread는 소멸.
 		+ sleep(long millis): millis / 1000초 만큼 thread를 중지시킨 후, 재실행.
-* ### #java.util 패키지
+* ### java.util package
 	+ Date: Date <=> Calendar 변환할 줄 알아야 함.
 		+ Date: 날짜를 년, 월, 일, 시, 분, 초 단위로 읽는 클래스.   
 			1970년 1월 1일 00시 시간부터 사용. (epoch time: 하루를 정확히 24시간(86,400초)으로 계산)   
@@ -63,7 +65,8 @@
 		+ List: sequence & duplicatable
 		+ Set: unduplicatable & 수학의 집합과 동일.
 		+ Map: unduplicatable key & at most one value (사전과 유사)
-* ### #java.sql 패키지: 데이터베이스와의 연결을 위한 자원 가짐.
+* ### java.sql package
+	+ 데이터베이스와의 연결을 위한 자원 가짐.
 	+ DriveManager: 적합한 JDBC드라이버를 찾고 연결하는 클래스.
 	+ Connection: 연결된 상태(session이 열림). 쿼리를 실행할 수 있음.   
 			결과값 반환은 Connection이 유지된 상태에서 가능.
@@ -71,7 +74,7 @@
 	+ PreparedStatement: 쿼리문을 precompiled해서 사용.   
 	Statement <-> PreparedStatement: 적은 양의 쿼리를 처리할 때는 Statement가 더 빠르지만 대량의 쿼리를 처리할 때는 PreparedStatement가 빠름.
 	+ ResultSet: a DB result set. cursor 속성이 있어, Iterable.
-* ### #java.io 패키지
+* ### java.io package
 	<pre>
 	물리적 파일의 입출력에 관련된 자원을 가짐. 
 	io 클래스를 사용하고나면 반드시 close()함수로 닫아야 함.
@@ -83,12 +86,14 @@
 	+ Buffered ~: 하나씩이 아닌 한덩어리씩 데이터를 주거나 받음.   
 			하나의 덩어리가 완전히 채워지면 차례차례 전송. 전송 단위가 더 큼.
 	+ BufferedOutputStream, BufferedWriter, FileOutputStream, FileWriter와 같이 파일을 작성하는 클래스는 아직 채워지지않은 마지막 덩어리(buffer)를 처리하기 위해 __반드시 flush()함수를 사용__.
-* ### #java.Net 패키지: networking 구현 관련 자원을 가짐.
+* ### java.Net package
+	+ networking 구현 관련 자원을 가짐.
 	+ Inet4Address : IPv4 (networking protocol. 32-bit address space : 2³²)
 	+ Inet6Address : IPv6 (networking protocol. 128-bit address space : 2¹²⁸)   
 	URI: 특정 자원을 명확하게 가리키는 문자열. (URN: URI 하위의 name space)     
 	URL: 자원을 찾기 좋은 정보로 구성 => 문자열. URI의 일종. (호스트이름 + 위치)
-* ### #생성자 (Constructor)
+* ### Constructor
+	+ : 생성자
 	<pre>
 	클래스의 객체를 생성할 때의 지침서.
 	인스턴스 변수 초기화에 관여.
@@ -114,7 +119,7 @@
 	}
 	```
 	+ 배열의 경우, 인스턴스하면 기초자료형 및 String 배열도 default 값으로 초기화 됨.
-* ### #flow control
+* ### flow control
 	+ if: 조건식 결과(parameter)가 참이면 if 블럭(scope)를 시행.   
 				거짓이면 else 블럭을 시행. 만약 else 블럭이 없으면 if 블럭만 건너뛰고 다음 라인을 시행.
 		+ short-circuit evaluation: 논리연산에서 첫 번째 조건이 부합하지 않으면 두번째 조건은 평가되지 않는다.
