@@ -2,16 +2,16 @@
 
 ## core Java
 
-## 목차
-[jdk](jdk)
-[API, 편집기](api)
-[java.lang 패키지](java.lang-패키지)
-[java.util 패키지](java.util-패키지)
-[java.sql 패키지](java.sql-패키지)
-[java.io 패키지](java.io-패키지)
-[java.Net 패키지](java.Net-패키지)
-[생성자](생성자)
-[flow control](flow-control)
+## 목차   
+1. [jdk](jdk---jdk-1.8-window-64-bit)
+2. [API, 편집기](api)
+3. [java.lang 패키지](java.lang-패키지)
+4. [java.util 패키지](java.util-패키지)
+5. [java.sql 패키지](java.sql-패키지)
+6. [java.io 패키지](java.io-패키지)
+7. [java.Net 패키지](java.Net-패키지)
+8. [생성자](생성자)
+9. [flow control](flow-control)
 
 * ### #jdk - jdk 1.8 window 64 bit
 	+ jdk => jdk(compiler) + jre(executor)   
